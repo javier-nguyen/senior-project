@@ -85,7 +85,7 @@ class App extends Component {
                                 Submit
                     </Button>
                     <Typography>Already have an account? 
-                        <Link href="signin"> Sign in</Link>
+                        <Link href="login"> Sign in</Link>
                     </Typography>
                 </Paper>
             </Grid>

@@ -82,10 +82,10 @@ class SignUp extends Component {
                     }
                     label = "Remember me" />
                     <Button startIcon={<SaveIcon/>} onClick={this.onSubmit.bind(this)} fullWidth variant = "contained" color = "secondary" style = {buttonStyle}>
-                                Submit
+                                Create Account
                     </Button>
                     <Typography>Already have an account? 
-                        <Link href="signin"> Sign in</Link>
+                        <Link href="login"> Sign in</Link>
                     </Typography>
                 </Paper>
             </Grid>

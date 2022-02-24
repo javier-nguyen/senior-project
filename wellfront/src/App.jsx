@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SignUp from './pages/SignUp';
-import Main from './pages/Main'
+import Main from './pages/Main';
+import LogIn from './pages/LogIn';
+import Core from './pages/Core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,6 +26,8 @@ export default function App() {
         <Routes>
           <Route path ="/" element ={<Main/>}></Route>
           <Route path ="/signup" element ={<SignUp/>}></Route>
+          <Route path = "/login" element ={<LogIn/>}></Route>
+          <Route path = "/core" element={<Core/>}></Route>
         </Routes>
       </Router>
     </div>

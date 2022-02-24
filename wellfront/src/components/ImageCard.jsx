@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ImageCard({ place, checked }) {
+const ImageCard = ({ place, checked }) => {
   const classes = useStyles();
 
   return (
@@ -70,3 +70,5 @@ export default function ImageCard({ place, checked }) {
     </Collapse>
   );
 }
+
+export default ImageCard

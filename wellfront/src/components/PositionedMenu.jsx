@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import {Route, Routes, BrowserRouter as Router, Link, Switch} from 'react-router-dom';
 import SignUp from './pages/SignUp'
 
-export default function PositionedMenu() {
+const PositionedMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -49,5 +49,7 @@ export default function PositionedMenu() {
       </div>
   );
 }
+ 
+export default PositionedMenu;
 
 
