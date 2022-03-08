@@ -15,6 +15,7 @@ class SignUp extends Component {
             email:'',
             password:''
         }
+        console.log(this);
         this.changeFullName = this.changeFullName.bind(this)
         this.changeEmail = this.changeEmail.bind(this)
         this.changeUsername = this.changeUsername.bind(this)
@@ -70,10 +71,10 @@ class SignUp extends Component {
                 <Paper elevation={10} style = {paperStyle}>
                     <Avatar style ={avatarStyle}><LockOutlinedIcon/></Avatar>
                     <h2>Sign Up</h2>
-                    <TextField label ='Full Name' placeholder='Enter fullname' onKeyPress={this.changeFullName} fullWidth required/>
-                    <TextField label ='Username' placeholder='Enter username' onKeyPress={this.changeUsername}fullWidth required/>
-                    <TextField label ='E-mail' placeholder='Enter e-mail' onKeyPress={this.changeEmail}fullWidth required/>
-                    <TextField label ='Password' placeholder='Enter password' type='password' onKeyPress={this.changePassword} fullWidth required/>
+                    <TextField label ='Full Name' placeholder='Enter fullname' onChange={this.changeFullName} fullWidth required/>
+                    <TextField label ='Username' placeholder='Enter username' onChange={this.changeUsername}fullWidth required/>
+                    <TextField label ='E-mail' placeholder='Enter e-mail' onChange={this.changeEmail}fullWidth required/>
+                    <TextField label ='Password' placeholder='Enter password' type='password' onChange={this.changePassword} fullWidth required/>
                     <FormControlLabel
                     control = {
                         <Checkbox

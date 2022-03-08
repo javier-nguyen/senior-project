@@ -28,6 +28,7 @@ export default function App() {
           <Route path ="/signup" element ={<SignUp/>}></Route>
           <Route path = "/login" element ={<LogIn/>}></Route>
           <Route path = "/core" element={<Core/>}></Route>
+          <Route path = "/chat"></Route>
         </Routes>
       </Router>
     </div>

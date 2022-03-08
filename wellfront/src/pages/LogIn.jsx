@@ -10,19 +10,16 @@ class LogIn extends Component {
     constructor() {
         super()
         this.state = {
-            fullName:'',
             username:'',
-            email:'',
             password:''
         }
-        this.changeFullName = this.changeFullName.bind(this)
-        this.changeEmail = this.changeEmail.bind(this)
         this.changeUsername = this.changeUsername.bind(this)
         this.changePassword = this.changePassword.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
 
     changeFullName(event){
+        console.log(event.target.value);
         this.setState({
             fullName:event.target.value
         })
@@ -45,19 +42,15 @@ class LogIn extends Component {
     onSubmit(event) {
         event.preventDefault()
         const registered = {
-            fullName: this.state.fullName,
             username: this.state.username,
-            email: this.state.email,
             password: this.state.password
         }
 
-        axios.post('http://localhost:4000/app/login', registered)
+        axios.post('http://localhost:4000/app/signin', registered)
         .then(response => console.log(response.data))
         
         this.setState({
-            fullName: '',
             username: '',
-            email: '',
             password: ''
         })
     }
@@ -70,7 +63,7 @@ class LogIn extends Component {
                 <Paper elevation={10} style = {paperStyle}>
                     <Avatar style ={avatarStyle}><LockOutlinedIcon/></Avatar>
                     <h2>Sign Up</h2>
-                    <TextField label ='E-mail' placeholder='Enter e-mail' onKeyPress={this.changeEmail}fullWidth required/>
+                    <TextField label ='Username' placeholder='Enter username' onKeyPress={this.changeUsername}fullWidth required/>
                     <TextField label ='Password' placeholder='Enter password' type='password' onKeyPress={this.changePassword} fullWidth required/>
                     <FormControlLabel
                     control = {
